@@ -1,6 +1,6 @@
 # Валидация пароля.
 def validate_password(password: str) -> bool:
-    if len(password) < 6: # ОШИБКА: изменено условие длины с < 8 на < 6
+    if len(password) < 8: # ОШИБКА ИСПРАВЛЕНА: изменено условие длины с < 6 на < 8
         return False
     if " " in password:
         return False
@@ -12,7 +12,7 @@ def validate_password(password: str) -> bool:
 
 # Деление чисел.
 def divide(a, b) -> float:
-    if not isinstance(a, (int, int)) or not isinstance(b, (int, int)): # ОШИБКА: изменены типы аргументов с (int, float) на (int, int)
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)): # ОШИБКА ИСПРАВЛЕНА: изменены типы аргументов с (int, int) на (int, float)
         raise TypeError("Оба аргумента должны быть числами (int или float)")
     if b == 0:
         raise ZeroDivisionError("Деление на ноль недопустимо")
