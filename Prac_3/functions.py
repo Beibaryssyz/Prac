@@ -12,7 +12,7 @@ def validate_password(password: str) -> bool:
 
 # Деление чисел.
 def divide(a, b) -> float:
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+    if not isinstance(a, (int, int)) or not isinstance(b, (int, int)): # ОШИБКА: изменены типы аргументов с (int, float) на (int, int)
         raise TypeError("Оба аргумента должны быть числами (int или float)")
     if b == 0:
         raise ZeroDivisionError("Деление на ноль недопустимо")
