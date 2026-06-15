@@ -1,6 +1,6 @@
 # Валидация пароля.
 def validate_password(password: str) -> bool:
-    if len(password) < 8:
+    if len(password) < 6: # ОШИБКА: изменено условие длины с < 8 на < 6
         return False
     if " " in password:
         return False
